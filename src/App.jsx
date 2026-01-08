@@ -48,6 +48,7 @@ const POSTER_THEMES = [
 
 const OUTPUT_LANGS = [
   { id: 'bilingual', name: '中英双语 (CN/EN)', en: 'Bilingual (CN/EN)' },
+  { id: 'mandarin', name: '纯中文 (CN)', en: 'Mandarin (CN)' },
   { id: 'pure_en', name: '纯英文 (English)', en: 'English Only' },
   { id: 'japanese', name: '日语 (Japanese)', en: 'Japanese' },
   { id: 'german', name: '德语 (German)', en: 'German' },
@@ -195,7 +196,7 @@ export default function App() {
       const prompt = `你是一个顶级的电商多模态视觉分析师。请分析素材输出识别报告。
       任务：
       1. 如果提供描述文字或链接，请结合分析。如果包含网址，使用 google_search 抓取信息。
-      2. 提取品牌名(CN/EN)、LOGO特点。
+      2. 提取品牌名(CN/EN)。
       3. 提取 5 个具备高度吸引力的核心卖点(USP)，包含中英文。
       4. 识别材质感与整体调性。
       
@@ -257,7 +258,7 @@ export default function App() {
         2. 排版效果：${selectedTypo.name}。
         
         【核心策划准则】：
-        1. 海报01必须是 KV 主视觉图。每张必须包含强力约束："严格还原上传的产品图细节，LOGO位置和颜色必须 1:1"。
+        1. 海报01必须是 KV 主视觉图。每张必须包含强力约束："严格还原上传的产品图细节，必须 1:1"。
         2. 提示词逻辑：严格遵循元提示词逻辑，包含 600-1000 字的 description_zh 说明。
         
         输出 JSON 数组，必须包含以下中英文双语字段以便UI切换：
@@ -410,7 +411,7 @@ export default function App() {
       [SCENE & TEXT]: ${poster.prompt_en} 
       [LAYOUT LOGIC]: ${layoutGuideForGen} 
       [NEGATIVE]: ${poster.negative_prompt} 
-      [MANDATORY]: Strictly restore product packaging and logo 1:1. Texture: ${analysisReport.material?.en || analysisReport.material || "High Quality"}.`;
+      [MANDATORY]: Strictly restore product packaging 1:1. Texture: ${analysisReport.material?.en || analysisReport.material || "High Quality"}.`;
       
       let parts = [{ text: finalSuperPrompt }];
       if (files[0]) {
