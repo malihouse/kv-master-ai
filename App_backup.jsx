@@ -15,7 +15,6 @@ const API_BASE = "https://generativelanguage.googleapis.com/v1beta/models";
 // --- 数据常量 (已添加国际化支持) ---
 const VISUAL_STYLES = [
   { id: 'mag', name: '杂志编辑风格', en: 'Magazine Editorial', desc: '高级、专业、大片感、粗衬线标题、极简留白' },
-  { id: 'surreal', name: '超现实主义', en: 'Surrealism', desc: '梦幻离奇、扭曲时空、符号化构图、强烈视觉冲击力、达利/马格利特风格感' },
   { id: 'watercolor', name: '水彩艺术风格', en: 'Watercolor Art', desc: '温暖、柔和、晕染效果、手绘质感' },
   { id: 'tech', name: '科技未来风格', en: 'Future Tech', desc: '冷色调、几何图形、数据可视化、蓝光效果' },
   { id: 'retro', name: '复古胶片风格', en: 'Retro Film', desc: '颗粒质感、暖色调、怀旧氛围、宝丽来边框' },
