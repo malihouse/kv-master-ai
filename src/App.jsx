@@ -15,13 +15,16 @@ const API_BASE = "https://generativelanguage.googleapis.com/v1beta/models";
 // --- 数据常量 (已添加国际化支持) ---
 const VISUAL_STYLES = [
   { id: 'mag', name: '杂志编辑风格', en: 'Magazine Editorial', desc: '高级、专业、大片感、粗衬线标题、极简留白' },
-  { id: 'surreal', name: '超现实主义', en: 'Surrealism', desc: '梦幻离奇、扭曲时空、符号化构图、强烈视觉冲击力、达利/马格利特风格感' },
+  { id: 'surreal', name: '超现实主义风格', en: 'Surrealism', desc: '梦幻离奇、扭曲时空、符号化构图、强烈视觉冲击力、达利/马格利特风格感' },
   { id: 'watercolor', name: '水彩艺术风格', en: 'Watercolor Art', desc: '温暖、柔和、晕染效果、手绘质感' },
   { id: 'tech', name: '科技未来风格', en: 'Future Tech', desc: '冷色调、几何图形、数据可视化、蓝光效果' },
-  { id: 'retro', name: '复古胶片风格', en: 'Retro Film', desc: '颗粒质感、暖色调、怀旧氛围、宝丽来边框' },
+  { id: 'retro', name: '复古胶片风格', en: 'Retro Film', desc: '颗粒质感、暖色调、怀旧氛围、宝丽来边框、情绪、光影、生活方式' },
   { id: 'nordic', name: '极简北欧风格', en: 'Minimalist Nordic', desc: '性冷淡、大留白、几何线条、黑白灰' },
+  { id: 'deconstructed', name: '解构主义拼贴风格', en: 'Deconstructed collage', desc: '解构拼贴风、碎片重组、非对称、冲突感、留白张力、层叠重组、视觉张力、David Carson/Neville Brody风格感' },
   { id: 'cyber', name: '霓虹赛博风格', en: 'Cyberpunk', desc: '荧光色、描边发光、未来都市、暗色背景' },
-  { id: 'organic', name: '自然有机风格', en: 'Natural Organic', desc: '植物元素、大地色系、手工质感、环保理念' }
+  { id: 'organic', name: '自然有机风格', en: 'Natural Organic', desc: '植物元素、大地色系、手工质感、环保理念' },
+  { id: 'trendy', name: '潮流扁平插画风格', en: 'Trendy Flat', desc: '扁平化、不规则形状、撞色、拼贴感、Malika Favre/Olimpia Zagnoli风格感' }
+  
 ];
 
 const TYPO_EFFECTS = [
@@ -34,7 +37,7 @@ const TYPO_EFFECTS = [
 ];
 
 const POSTER_THEMES = [
-  { id: '01', name: '海报01 - 主KV视觉', en: 'Poster 01 - Hero KV', desc: 'Hero Shot，严格还原上传的产品图' },
+  { id: '01', name: '海报01 - 主KV视觉', en: 'Poster 01 - Hero KV', desc: 'Hero Shot，根据上传的产品图，可根据所选场景风格做对应的风格转绘' },
   { id: '02', name: '海报02 - 生活/使用场景', en: 'Poster 02 - Lifestyle Usage', desc: 'Lifestyle，展示产品实际使用' },
   { id: '03', name: '海报03 - 工艺/技术/概念可视化', en: 'Poster 03 - Tech/Concept', desc: 'Process/Concept，基于识别的卖点' },
   { id: '04', name: '细节特写01 - 放大产品细节', en: 'Detail 01 - Zoom In', desc: 'Detail 01，放大产品细节' },
@@ -258,7 +261,7 @@ export default function App() {
         2. 排版效果：${selectedTypo.name}。
         
         【核心策划准则】：
-        1. 海报01必须是 KV 主视觉图。每张必须包含强力约束："严格还原上传的产品图细节，必须 1:1"。
+        1. 海报01必须是 KV 主视觉图。每张必须包含强力约束："根据上传的产品图，可根据所选场景风格做对应的风格转绘，必须 1:1"。
         2. 提示词逻辑：严格遵循元提示词逻辑，包含 600-1000 字的 description_zh 说明。
         
         输出 JSON 数组，必须包含以下中英文双语字段以便UI切换：
