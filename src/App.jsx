@@ -23,8 +23,12 @@ const VISUAL_STYLES = [
   { id: 'deconstructed', name: '解构主义拼贴风格', en: 'Deconstructed collage', desc: '解构拼贴风、碎片重组、非对称、冲突感、留白张力、层叠重组、视觉张力、David Carson/Neville Brody风格感' },
   { id: 'cyber', name: '霓虹赛博风格', en: 'Cyberpunk', desc: '荧光色、描边发光、未来都市、暗色背景' },
   { id: 'organic', name: '自然有机风格', en: 'Natural Organic', desc: '植物元素、大地色系、手工质感、环保理念' },
-  { id: 'trendy', name: '潮流扁平插画风格', en: 'Trendy Flat', desc: '扁平化、不规则形状、撞色、拼贴感、Malika Favre/Olimpia Zagnoli风格感' }
-  
+  { id: 'ukiyo-e', name: '浮世绘风格', en: 'Ukiyo-e style', desc: '平涂、粗线条、装饰感、传统日式、强轮廓、葛饰北斋(Hokusai)风格感' },
+  { id: 'ghibli', name: '吉卜力风格', en: 'Ghibli Style', desc: '柔光、自然、治愈、手绘感、故事感、宫崎骏风格感' },
+  { id: 'cel-shaded', name: '二次元风格', en: 'Anime style、Cel-shaded anime style', desc: '动漫人物、日式萌绘、表情夸张、年轻化、ACG文化、岸田梅尔(Kishida Mel)风格感' },
+  { id: 'modern', name: '平涂可爱风', en: 'Modern Moe、Flat Moe', desc: '大眼、圆脸、简洁平涂、高饱和、少渐变、原神、崩铁、米哈游系、LoveLive、BanG Dream风格感' },
+  { id: 'chibi', name: 'Q版', en: 'Chibi Style、Super Deformed Style', desc: '超大头、2~4头身、极致可爱、表情包化、Chiikawa、P助、すみっコぐらし系联名' },
+  { id: 'trendy', name: '潮流扁平插画风格', en: 'Trendy Flat', desc: '扁平化、不规则形状、撞色、拼贴感、Malika Favre、Olimpia Zagnoli风格感' }
 ];
 
 const TYPO_EFFECTS = [
