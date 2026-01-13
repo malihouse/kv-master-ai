@@ -19,6 +19,7 @@ const VISUAL_STYLES = [
   { id: 'watercolor', name: '水彩艺术风格', en: 'Watercolor Art', desc: '温暖、柔和、晕染效果、手绘质感' },
   { id: 'tech', name: '科技未来风格', en: 'Future Tech', desc: '冷色调、几何图形、数据可视化、蓝光效果' },
   { id: 'retro', name: '复古胶片风格', en: 'Retro Film', desc: '颗粒质感、暖色调、怀旧氛围、宝丽来边框、情绪、光影、生活方式' },
+  { id: 'Maximalism', name: '极繁主义风格', en: 'Maximalism', desc: 'Bold, contrasting color choices, Exaggerated design elements and typefaces, Frequent use of abstract visuals' },
   { id: 'nordic', name: '极简北欧风格', en: 'Minimalist Nordic', desc: '性冷淡、大留白、几何线条、黑白灰' },
   { id: 'deconstructed', name: '解构主义拼贴风格', en: 'Deconstructed collage', desc: '解构拼贴风、碎片重组、非对称、冲突感、留白张力、层叠重组、视觉张力、David Carson/Neville Brody风格感' },
   { id: 'cyber', name: '霓虹赛博风格', en: 'Cyberpunk', desc: '荧光色、描边发光、未来都市、暗色背景' },
@@ -28,6 +29,7 @@ const VISUAL_STYLES = [
   { id: 'cel-shaded', name: '二次元风格', en: 'Anime style、Cel-shaded anime style', desc: '动漫人物、日式萌绘、表情夸张、年轻化、ACG文化、岸田梅尔(Kishida Mel)风格感' },
   { id: 'modern', name: '平涂可爱风', en: 'Modern Moe、Flat Moe', desc: '大眼、圆脸、简洁平涂、高饱和、少渐变、原神、崩铁、米哈游系、LoveLive、BanG Dream风格感' },
   { id: 'chibi', name: 'Q版', en: 'Chibi Style、Super Deformed Style', desc: '超大头、2~4头身、极致可爱、表情包化、Chiikawa、P助、すみっコぐらし系联名' },
+  { id: 'Popart', name: '波普风格', en: 'Pop art', desc: '孟菲斯几何 + 波普符号 + 90s复古色彩、高能量视觉碰撞、夸张符号、复古噪点、玩味感、多巴胺配色、强节奏' },
   { id: 'trendy', name: '潮流扁平插画风格', en: 'Trendy Flat', desc: '扁平化、不规则形状、撞色、拼贴感、Malika Favre、Olimpia Zagnoli风格感' }
 ];
 
