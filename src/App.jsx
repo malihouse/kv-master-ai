@@ -8,8 +8,8 @@ import {
 } from 'lucide-react';
 
 // --- 核心模型配置 (严格锁定) ---
-const MODEL_TEXT = "gemini-3-pro-preview";
-const MODEL_IMAGE = "gemini-3-pro-image-preview"; 
+const MODEL_TEXT = "gemini-3.1-pro-preview";
+const MODEL_IMAGE = "gemini-3.1-flash-image-preview"; 
 const API_BASE = "https://generativelanguage.googleapis.com/v1beta/models";
 
 // --- 数据常量 (已添加国际化支持) ---
@@ -30,6 +30,8 @@ const VISUAL_STYLES = [
   { id: 'modern', name: '平涂可爱风', en: 'Modern Moe、Flat Moe', desc: '大眼、圆脸、简洁平涂、高饱和、少渐变、原神、崩铁、米哈游系、LoveLive、BanG Dream风格感' },
   { id: 'chibi', name: 'Q版', en: 'Chibi Style、Super Deformed Style', desc: '超大头、2~4头身、极致可爱、表情包化、Chiikawa、P助、すみっコぐらし系联名' },
   { id: 'Popart', name: '波普风格', en: 'Pop art', desc: '孟菲斯几何 + 波普符号 + 90s复古色彩、高能量视觉碰撞、夸张符号、复古噪点、玩味感、多巴胺配色、强节奏' },
+  { id: 'B & W', name: '黑白极酷风格', en: 'Black & White', desc: '高对比、硬光、强阴影、冷感、极简、锋利轮廓、态度感、反情绪化' },
+  { id: 'Giant Object', name: '巨物表现风格', en: 'Giant Object', desc: '超尺度、比例失衡、压迫感、视觉震撼、主角崇拜、力量感、史诗感' },
   { id: 'trendy', name: '潮流扁平插画风格', en: 'Trendy Flat', desc: '扁平化、不规则形状、撞色、拼贴感、Malika Favre、Olimpia Zagnoli风格感' }
 ];
 
