@@ -8,7 +8,7 @@ import {
 } from 'lucide-react';
 
 // --- 核心模型配置 (严格锁定) ---
-const MODEL_TEXT = "gemini-3.0-pro-preview";
+const MODEL_TEXT = "gemini-3-pro-preview";
 const MODEL_IMAGE = "gemini-3.1-flash-image-preview"; 
 const API_BASE = "https://generativelanguage.googleapis.com/v1beta/models";
 
