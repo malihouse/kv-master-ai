@@ -9,7 +9,7 @@ import {
 
 // --- 核心模型配置 (严格锁定) ---
 const MODEL_TEXT = "gemini-3.1-flash-lite-preview";
-const MODEL_IMAGE = "gemini-3.1-flash-image-preview"; 
+const MODEL_IMAGE = "gemini-3-pro-image-preview"; 
 const API_BASE = "https://generativelanguage.googleapis.com/v1beta/models";
 
 // --- 数据常量 (已添加国际化支持) ---
